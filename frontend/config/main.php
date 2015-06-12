@@ -8,10 +8,16 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'name' => 'Oauth2 WMS',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'enableStrictParsing' => false,
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -28,6 +34,31 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+    ],
+    'modules' => [
+        'oauth2' => [
+            'class' => 'filsh\yii2\oauth2server\Module',
+            'options' => [
+                'token_param_name' => 'accessToken',
+                'access_lifetime' => 3600 * 24
+            ],
+            'storageMap' => [
+                'user_credentials' => 'common\models\User'
+            ],
+            'grantTypes' => [
+                'client_credentials' => [
+                    'class' => '\OAuth2\GrantType\ClientCredentials',
+                    'allow_public_clients' => false
+                ],
+                'user_credentials' => [
+                    'class' => '\OAuth2\GrantType\UserCredentials'
+                ],
+                'refresh_token' => [
+                    'class' => '\OAuth2\GrantType\RefreshToken',
+                    'always_issue_new_refresh_token' => true
+                ]
+            ],
+        ]
     ],
     'params' => $params,
 ];
