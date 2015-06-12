@@ -77,7 +77,7 @@ foreach ($files as $file) {
     }
 }
 
-$callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink'];
+$callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink', 'setMysqlParams', 'setWampRouterParams'];
 foreach ($callbacks as $callback) {
     if (!empty($env[$callback])) {
         $callback($root, $env[$callback]);
@@ -195,6 +195,26 @@ function setCookieValidationKey($root, $paths)
         $bytes = openssl_random_pseudo_bytes($length);
         $key = strtr(substr(base64_encode($bytes), 0, $length), '+/=', '_-.');
         $content = preg_replace('/(("|\')cookieValidationKey("|\')\s*=>\s*)(""|\'\')/', "\\1'$key'", file_get_contents($file));
+        file_put_contents($file, $content);
+    }
+}
+
+function setMysqlParams($root, $params)
+{
+    setReplacedParams($root, $params);
+}
+
+function setWampRouterParams($root, $params)
+{
+    setReplacedParams($root, $params);
+}
+
+function setReplacedParams($root, $params)
+{
+    foreach ($params['paths'] as $file) {
+        echo "   generate replaced params in $file\n";
+        $file = $root . '/' . $file;
+        $content = str_replace(array_keys($params['params']), array_values($params['params']), file_get_contents($file));
         file_put_contents($file, $content);
     }
 }

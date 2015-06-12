@@ -28,38 +28,67 @@
  * ];
  * ```
  */
-return [
-    'Development' => [
-        'path' => 'dev',
-        'setWritable' => [
-            'backend/runtime',
-            'backend/web/assets',
-            'frontend/runtime',
-            'frontend/web/assets',
+require(dirname(__DIR__) . '/vendor/autoload.php');
+
+return yii\helpers\ArrayHelper::merge(
+    [
+        'dev' => [
+            'path' => 'dev',
+            'setWritable' => [
+                'backend/runtime',
+                'backend/web/assets',
+                'frontend/runtime',
+                'frontend/web/assets',
+            ],
+            'setExecutable' => [
+                'yii',
+                'tests/codeception/bin/yii',
+            ],
+            'setCookieValidationKey' => [
+                'backend/config/main-local.php',
+                'frontend/config/main-local.php',
+            ],
+            'setMysqlParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
+            'setWampRouterParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
         ],
-        'setExecutable' => [
-            'yii',
-            'tests/codeception/bin/yii',
-        ],
-        'setCookieValidationKey' => [
-            'backend/config/main-local.php',
-            'frontend/config/main-local.php',
+        'prod' => [
+            'path' => 'prod',
+            'setWritable' => [
+                'backend/runtime',
+                'backend/web/assets',
+                'frontend/runtime',
+                'frontend/web/assets',
+            ],
+            'setExecutable' => [
+                'yii',
+            ],
+            'setCookieValidationKey' => [
+                'backend/config/main-local.php',
+                'frontend/config/main-local.php',
+            ],
+            'setMysqlParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
+            'setWampRouterParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
         ],
     ],
-    'Production' => [
-        'path' => 'prod',
-        'setWritable' => [
-            'backend/runtime',
-            'backend/web/assets',
-            'frontend/runtime',
-            'frontend/web/assets',
-        ],
-        'setExecutable' => [
-            'yii',
-        ],
-        'setCookieValidationKey' => [
-            'backend/config/main-local.php',
-            'frontend/config/main-local.php',
-        ],
-    ],
-];
+    require(__DIR__ . '/index-local.php')
+);

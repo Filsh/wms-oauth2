@@ -2,15 +2,13 @@
 return [
     'components' => [
         'db' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
-            'username' => 'root',
-            'password' => '',
-            'charset' => 'utf8',
+            'dsn' => 'mysql:host=%MYSQL_TCP_ADDR%;port=%MYSQL_TCP_PORT%;dbname=%MYSQL_DATABASE%',
+            'username' => '%MYSQL_ENV_MYSQL_USER%',
+            'password' => '%MYSQL_ENV_MYSQL_PASSWORD%'
         ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'viewPath' => '@common/mail',
+        'wampRouter' => [
+            'host' => '%WAMP_TCP_ADDR%',
+            'port' => '%WAMP_TCP_PORT%',
         ],
     ],
 ];
