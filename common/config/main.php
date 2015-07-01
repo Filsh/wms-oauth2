@@ -2,6 +2,9 @@
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'authManager' => [
+            'class' => 'dektrium\rbac\components\DbManager',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -17,14 +20,10 @@ return [
             'viewPath' => '@common/mail',
         ],
         'wampRouter' => [
-            'class' => 'filsh\wamprouter\WampRouter',
+            'class' => 'filsh\wamp\components\Router',
             'host' => 'xxxxxx',
             'port' => 'xxxxxx',
             'realm' => 'realm'
-        ],
-        'wampLocator' => [
-            'class' => 'filsh\yii2\runner\RunnerComponent',
-            'runners' => []
         ]
     ],
 ];
