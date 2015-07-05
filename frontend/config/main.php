@@ -17,6 +17,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'enableStrictParsing' => false,
+            'rules' => [
+                'connect/<authclient:(facebook|twitter|google)>' => 'connect/auth',
+            ]
         ],
         'user' => [
             'identityClass' => 'common\models\User',

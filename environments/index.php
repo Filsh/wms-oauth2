@@ -60,6 +60,12 @@ return yii\helpers\ArrayHelper::merge(
                 ],
                 'params' => [],
             ],
+            'setAuthClientParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
         ],
         'prod' => [
             'path' => 'prod',
@@ -83,6 +89,12 @@ return yii\helpers\ArrayHelper::merge(
                 'params' => [],
             ],
             'setWampRouterParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
+            'setAuthClientParams' => [
                 'paths' => [
                     'common/config/main-local.php'
                 ],

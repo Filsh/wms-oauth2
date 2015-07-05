@@ -10,5 +10,21 @@ return [
             'host' => '%WAMP_TCP_ADDR%',
             'port' => '%WAMP_TCP_PORT%',
         ],
+        'authClientCollection' => [
+            'clients' => [
+                'facebook' => [
+                    'clientId'      => '%FACEBOOK_CLIENT_ID%',
+                    'clientSecret'  => '%FACEBOOK_CLIENT_SECRET%',
+                ],
+                'twitter' => [
+                    'consumerKey'       => '%TWITTER_CONSUMER_KEY%',
+                    'consumerSecret'    => '%TWITTER_CONSUMER_SECRET%',
+                ],
+                'google' => [
+                    'clientId'      => '%GOOGLE_CLIENT_ID%',
+                    'clientSecret'  => '%GOOGLE_CLIENT_SECRET%',
+                ]
+            ],
+        ],
     ],
 ];

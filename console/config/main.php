@@ -22,9 +22,6 @@ return [
         ],
     ],
     'modules' => [
-        'user' => [
-            'class' => 'dektrium\user\Module',
-        ],
         'wamp' => [
             'class' => 'filsh\wamp\Module',
             'wampRouter' => 'wampRouter',
@@ -33,7 +30,9 @@ return [
                 \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_ACCESS_TOKEN => \console\runners\identity\AccessToken::class,
                 \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_CREDENTIALS => \console\runners\identity\Credentials::class,
                 
-                \filsh\wms\wamplocator\Locator::CREATE_IDENTITY => \console\runners\identity\Create::class
+                \filsh\wms\wamplocator\Locator::CREATE_IDENTITY => \console\runners\identity\Create::class,
+                
+                \filsh\wms\wamplocator\Locator::GET_ACCOUNT_BY_ID => \console\runners\account\Id::class,
             ]
         ]
     ],
