@@ -231,10 +231,7 @@
                     "vendor/",
                     "script/",
                     "test/"
-                ],
-                "branch-alias": {
-                    "dev-master": "2.0.3-dev"
-                }
+                ]
             },
             "license": [
                 "MIT"
@@ -606,12 +603,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/wms-wamp-locator.git",
-                "reference": "1264774cb8931502279d18cc7f9b4ddde10120fc"
+                "reference": "5adb91400796606ca6561109f6d1a18e404126b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/wms-wamp-locator/zipball/1264774cb8931502279d18cc7f9b4ddde10120fc",
-                "reference": "1264774cb8931502279d18cc7f9b4ddde10120fc",
+                "url": "https://api.github.com/repos/Filsh/wms-wamp-locator/zipball/5adb91400796606ca6561109f6d1a18e404126b1",
+                "reference": "5adb91400796606ca6561109f6d1a18e404126b1",
                 "shasum": ""
             },
             "require": {
@@ -646,7 +643,7 @@
                 "source": "https://bitbucket.org/filsh/wms-wamp-locator",
                 "issues": "https://github.com/Filsh/wms-wamp-locator/issues"
             },
-            "time": "2015-07-01 19:09:39"
+            "time": "2015-07-05 21:43:30"
         },
         {
             "name": "filsh/yii2-oauth2-server",
@@ -745,12 +742,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/yii2-wamp.git",
-                "reference": "d9939b8ae10a2e5dd5dec613e7f0bc84ec798020"
+                "reference": "5c6261ac6eba590d3af6ca579acbddca0e4d5a82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/d9939b8ae10a2e5dd5dec613e7f0bc84ec798020",
-                "reference": "d9939b8ae10a2e5dd5dec613e7f0bc84ec798020",
+                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/5c6261ac6eba590d3af6ca579acbddca0e4d5a82",
+                "reference": "5c6261ac6eba590d3af6ca579acbddca0e4d5a82",
                 "shasum": ""
             },
             "require": {
@@ -782,7 +779,7 @@
                 "module",
                 "yii"
             ],
-            "time": "2015-07-01 19:00:46"
+            "time": "2015-07-05 21:45:26"
         },
         {
             "name": "guzzle/guzzle",
@@ -1183,16 +1180,16 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef"
+                "reference": "3b6fca09c7d56321057fa8867c8dbe1abf648627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/3b6fca09c7d56321057fa8867c8dbe1abf648627",
+                "reference": "3b6fca09c7d56321057fa8867c8dbe1abf648627",
                 "shasum": ""
             },
             "require": {
@@ -1219,11 +1216,11 @@
             "authors": [
                 {
                     "name": "Jan Sorgalla",
-                    "email": "jsorgalla@googlemail.com"
+                    "email": "jsorgalla@gmail.com"
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2014-12-30 13:32:42"
+            "time": "2015-07-03 13:48:55"
         },
         {
             "name": "react/socket",
@@ -1658,12 +1655,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "743b623f03dd49672ceb50835ad70e70e5c1099f"
+                "reference": "ed54d027fd14156b97bf73864501589171fe115b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/743b623f03dd49672ceb50835ad70e70e5c1099f",
-                "reference": "743b623f03dd49672ceb50835ad70e70e5c1099f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ed54d027fd14156b97bf73864501589171fe115b",
+                "reference": "ed54d027fd14156b97bf73864501589171fe115b",
                 "shasum": ""
             },
             "require": {
@@ -1738,7 +1735,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-07-01 03:54:34"
+            "time": "2015-07-02 13:20:32"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -2005,9 +2002,9 @@
                 "bower-asset/jquery": ">=1.7"
             },
             "require-dev": {
-                "bower-asset/jasmine-ajax": "~1.3.1",
-                "bower-asset/jasmine-jquery": "~1.5.2",
-                "bower-asset/jquery": "~1.7"
+                "bower-asset/jasmine-ajax": ">=1.3.1,<1.4",
+                "bower-asset/jasmine-jquery": ">=1.5.2,<1.6",
+                "bower-asset/jquery": ">=1.7,<1.8"
             },
             "type": "bower-asset-library",
             "extra": {
