@@ -33,6 +33,8 @@ return [
                 \filsh\wms\wamplocator\Locator::CREATE_IDENTITY => \console\runners\identity\Create::class,
                 
                 \filsh\wms\wamplocator\Locator::GET_ACCOUNT_BY_ID => \console\runners\account\Id::class,
+                
+                \filsh\wms\wamplocator\Locator::GET_USER_BY_IDENTITY => \console\runners\user\Identity::class,
             ]
         ]
     ],
