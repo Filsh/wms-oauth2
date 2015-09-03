@@ -21,6 +21,20 @@ use OAuth2\Storage\UserCredentialsInterface;
  */
 class User extends \dektrium\user\models\User implements UserCredentialsInterface
 {
+    public function fields()
+    {
+        $profile = $this->getProfile()->one();
+        $fields = [
+            'id',
+            'email',
+            'username',
+            'profile' => function() use ($profile) {
+                return $profile;
+            }
+        ];
+        return $fields;
+    }
+    
     /**
      * Validates password
      *

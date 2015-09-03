@@ -11,12 +11,8 @@ class Identity extends \console\runners\User
     protected function doRun()
     {
         $user = $this->finder->findUserById($this->id);
-        
-        $argKw = null;
         if($user !== null && $user->validateAuthKey($this->authKey)) {
-            $argKw = $user->getAttributes();
+            return [null, $user];
         }
-
-        return new \Thruway\Result(null, $argKw);
     }
 }
