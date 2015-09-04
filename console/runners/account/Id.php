@@ -9,12 +9,6 @@ class Id extends \console\runners\Account
     protected function doRun()
     {
         $account = $this->finder->findAccountById($this->id);
-
-        $argKw = null;
-        if ($account !== null) {
-            $argKw = $account->getAttributes();
-        }
-        
-        return new \Thruway\Result(null, $argKw);
+        return [null, $account];
     }
 }

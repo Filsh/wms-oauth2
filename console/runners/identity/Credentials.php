@@ -21,8 +21,8 @@ class Credentials extends \console\runners\Identity
         
         $identity = $model->identity();
         if($identity !== false) {
-            return $this->formatIdentityResult($identity);
+            return [null, $this->formatResult($identity)];
         }
-        return $this->formatModelError($model);
+        return $this->formatError($model);
     }
 }

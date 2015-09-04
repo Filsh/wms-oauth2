@@ -12,6 +12,6 @@ class AccessToken extends \console\runners\Identity
     {
         /* @var $identity \yii\web\IdentityInterface */
         $identity = \common\models\User::findIdentityByAccessToken($this->accessToken, $this->type);
-        return $this->formatIdentityResult($identity);
+        return [null, $this->formatResult($identity)];
     }
 }

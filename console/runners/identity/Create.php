@@ -29,9 +29,9 @@ class Create extends \console\runners\Identity
         $user = $this->create($account);
         
         if ($user->hasErrors()) {
-            return $this->formatModelError($user);
+            return $this->formatError($user);
         }
-        return $this->formatIdentityResult($user);
+        return [null, $this->formatResult($user)];
     }
     
     protected function create(Account $account = null)

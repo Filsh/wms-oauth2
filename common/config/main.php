@@ -49,6 +49,10 @@ return [
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
+            'modelMap' => [
+                'User' => \common\models\User::class,
+                'Profile' => \common\models\Profile::class
+            ]
         ],
     ],
 ];

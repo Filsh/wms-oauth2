@@ -7,19 +7,17 @@ use filsh\wamp\exceptions\ModelValidationException;
 
 abstract class Identity extends Runner
 {
-    protected function formatIdentityResult(\yii\web\IdentityInterface $identity = null)
+    protected function formatResult(\yii\web\IdentityInterface $identity = null)
     {
-        $argKw = null;
         if($identity !== null) {
-            $argKw = [
+            return [
                 'id' => $identity->getId(),
                 'authKey' => $identity->getAuthKey()
             ];
         }
-        return new \Thruway\Result(null, $argKw);
     }
     
-    protected function formatModelError(\yii\base\Model $model)
+    protected function formatError(\yii\base\Model $model)
     {
         if($model->hasErrors()) {
             throw new ModelValidationException($model);

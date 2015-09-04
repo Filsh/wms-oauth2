@@ -14,5 +14,6 @@ class Identity extends \console\runners\User
         if($user !== null && $user->validateAuthKey($this->authKey)) {
             return [null, $user];
         }
+        return [null, null];
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace common\models;
 
 use Yii;
@@ -23,16 +24,14 @@ class User extends \dektrium\user\models\User implements UserCredentialsInterfac
 {
     public function fields()
     {
-        $profile = $this->getProfile()->one();
-        $fields = [
+        return [
             'id',
             'email',
             'username',
-            'profile' => function() use ($profile) {
-                return $profile;
+            'profile' => function() {
+                return $this->getProfile()->one();
             }
         ];
-        return $fields;
     }
     
     /**
