@@ -6,13 +6,6 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '',
         ],
-        'urlManager' => [
-            'rules' => [
-                'http://www.lookinday.dev/connect/account' => 'connect/account',
-                'http://www.lookinday.dev/connect/success' => 'connect/success',
-                'http://www.lookinday.dev/connect/cancel' => 'connect/cancel',
-            ]
-        ],
     ],
 ];
 

@@ -39,19 +39,30 @@ return [
                     'consumerSecret'    => 'xxxxxx',
                 ],
                 'google' => [
-                    'class'         => 'dektrium\user\clients\Google',
+                    'class'         => 'common\clients\Google',
                     'clientId'      => 'xxxxxx',
                     'clientSecret'  => 'xxxxxx',
                 ]
             ],
         ],
+        'i18n' => [
+            'translations' => [
+                'common' => [
+                    'class' => 'yii\i18n\GettextMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@common/messages',
+                ]
+            ]
+        ],
     ],
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
+            'enableRegistration' => false,
             'modelMap' => [
                 'User' => \common\models\User::class,
-                'Profile' => \common\models\Profile::class
+                'Profile' => \common\models\Profile::class,
+                'Account' => \common\models\Account::class
             ]
         ],
     ],

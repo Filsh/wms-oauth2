@@ -1,14 +1,13 @@
 <?php
+
+use Yii;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use frontend\widgets\Alert;
 
-/* @var $this \yii\web\View */
-/* @var $content string */
-
+/**
+ * @var \yii\web\View $this
+ * @var string $content
+ */
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -23,53 +22,25 @@ AppAsset::register($this);
 </head>
 <body>
     <?php $this->beginBody() ?>
-    <div class="wrap">
-        <?php
-            NavBar::begin([
-                'brandLabel' => 'My Company',
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
-                ],
-            ]);
-            $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']],
-            ];
-            if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Signup', 'url' => ['/user/register']];
-                $menuItems[] = ['label' => 'Login', 'url' => ['/user/login']];
-            } else {
-                $menuItems[] = [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/user/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ];
-            }
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => $menuItems,
-            ]);
-            NavBar::end();
-        ?>
-
-        <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+    <div id="wrap">
+        <nav id="header" class="navbar-static-top navbar-default navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <?= Html::a(Yii::$app->name, Yii::$app->homeUrl, ['class' => 'navbar-brand']); ?>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="content">
+            <?= $content ?>
         </div>
+        <div id="push"></div>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
-    </footer>
-
+    <div id="footer">
+        <footer class="panel copyright">
+            <div class="container"></div>
+        </footer>
+    </div>
     <?php $this->endBody() ?>
 </body>
 </html>
