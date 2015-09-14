@@ -2,7 +2,7 @@
 
 namespace console\runners;
 
-abstract class Account extends Runner
+abstract class Account extends \filsh\wamp\components\Runner
 {
     /** @var \dektrium\user\Finder */
     protected $finder;

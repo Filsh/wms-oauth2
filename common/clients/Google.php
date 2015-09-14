@@ -4,7 +4,9 @@ namespace common\clients;
 
 class Google extends \dektrium\user\clients\Google
 {
-    /** @inheritdoc */
+    /**
+     * @inheritdoc
+     */
     public function getEmail()
     {   
         $email = parent::getEmail();

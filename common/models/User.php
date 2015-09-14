@@ -3,7 +3,6 @@
 namespace common\models;
 
 use Yii;
-use yii\base\NotSupportedException;
 use OAuth2\Storage\UserCredentialsInterface;
 
 /**
@@ -22,6 +21,9 @@ use OAuth2\Storage\UserCredentialsInterface;
  */
 class User extends \dektrium\user\models\User implements UserCredentialsInterface
 {
+    /**
+     * @inheritdoc
+     */
     public function fields()
     {
         return [
@@ -32,6 +34,14 @@ class User extends \dektrium\user\models\User implements UserCredentialsInterfac
                 return $this->getProfile()->one();
             }
         ];
+    }
+    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAvatar()
+    {
+        return $this->hasOne(Avatar::className(), ['user_id' => 'id']);
     }
     
     /**
@@ -69,5 +79,19 @@ class User extends \dektrium\user\models\User implements UserCredentialsInterfac
             $details['user_id'] = $user->id;
         }
         return $details;
+    }
+    
+    public function createAvatar($imageUrl)
+    {
+        $result = Yii::$app->wampLocator->uploadImageFile(
+            ['url' => $imageUrl, 'type' => 'avatar'],
+            function() {
+                var_dump(func_get_args());exit;
+            },
+            function() {
+                var_dump(func_get_args());exit;
+            }
+        );
+        var_dump($imageUrl, $result);exit;
     }
 }

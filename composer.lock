@@ -231,7 +231,10 @@
                     "vendor/",
                     "script/",
                     "test/"
-                ]
+                ],
+                "branch-alias": {
+                    "dev-master": "2.0.3-dev"
+                }
             },
             "license": [
                 "MIT"
@@ -399,12 +402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dektrium/yii2-rbac.git",
-                "reference": "c4c9f8e5e289f1807eea5213b62f1051608cf4af"
+                "reference": "a1fd759990291392b5aeb3831855c0ce15eba4a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-rbac/zipball/c4c9f8e5e289f1807eea5213b62f1051608cf4af",
-                "reference": "c4c9f8e5e289f1807eea5213b62f1051608cf4af",
+                "url": "https://api.github.com/repos/dektrium/yii2-rbac/zipball/a1fd759990291392b5aeb3831855c0ce15eba4a1",
+                "reference": "a1fd759990291392b5aeb3831855c0ce15eba4a1",
                 "shasum": ""
             },
             "require": {
@@ -441,7 +444,7 @@
                 "yii2",
                 "yii2-rbac"
             ],
-            "time": "2015-07-27 18:54:47"
+            "time": "2015-09-13 19:39:35"
         },
         {
             "name": "dektrium/yii2-user",
@@ -603,12 +606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/wms-wamp-locator.git",
-                "reference": "7beb7ce871d02f0284bdc09920cd08b2370e59f1"
+                "reference": "b5bc04d1d2942f0dbec69bdc405df7c43f99186d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/wms-wamp-locator/zipball/7beb7ce871d02f0284bdc09920cd08b2370e59f1",
-                "reference": "7beb7ce871d02f0284bdc09920cd08b2370e59f1",
+                "url": "https://api.github.com/repos/Filsh/wms-wamp-locator/zipball/b5bc04d1d2942f0dbec69bdc405df7c43f99186d",
+                "reference": "b5bc04d1d2942f0dbec69bdc405df7c43f99186d",
                 "shasum": ""
             },
             "require": {
@@ -643,7 +646,7 @@
                 "source": "https://bitbucket.org/filsh/wms-wamp-locator",
                 "issues": "https://github.com/Filsh/wms-wamp-locator/issues"
             },
-            "time": "2015-09-01 16:03:16"
+            "time": "2015-09-13 20:30:17"
         },
         {
             "name": "filsh/yii2-oauth2-server",
@@ -742,12 +745,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/yii2-wamp.git",
-                "reference": "71805710c223f4305eeaa854c7ca922cd90c2e92"
+                "reference": "f31a3cc3ee43909d58f7160c7f17dc6e81804e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/71805710c223f4305eeaa854c7ca922cd90c2e92",
-                "reference": "71805710c223f4305eeaa854c7ca922cd90c2e92",
+                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/f31a3cc3ee43909d58f7160c7f17dc6e81804e51",
+                "reference": "f31a3cc3ee43909d58f7160c7f17dc6e81804e51",
                 "shasum": ""
             },
             "require": {
@@ -779,7 +782,7 @@
                 "module",
                 "yii"
             ],
-            "time": "2015-07-06 15:48:06"
+            "time": "2015-09-13 20:51:06"
         },
         {
             "name": "guzzle/guzzle",
@@ -928,12 +931,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-select2.git",
-                "reference": "8899c9062e9111583bdbfe070f60e4075fd45a44"
+                "reference": "e72880e7e8dfc845c112ed7df275bf1c929be6db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/8899c9062e9111583bdbfe070f60e4075fd45a44",
-                "reference": "8899c9062e9111583bdbfe070f60e4075fd45a44",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/e72880e7e8dfc845c112ed7df275bf1c929be6db",
+                "reference": "e72880e7e8dfc845c112ed7df275bf1c929be6db",
                 "shasum": ""
             },
             "require": {
@@ -968,7 +971,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-08-30 13:38:14"
+            "time": "2015-09-12 19:56:48"
         },
         {
             "name": "psr/log",
@@ -1099,12 +1102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
-                "reference": "e61f53c03be1ee277d4dd9650412285a64a0a4d2"
+                "reference": "3fa027f1fe57e146203538c41db5b3e6c296b67a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/e61f53c03be1ee277d4dd9650412285a64a0a4d2",
-                "reference": "e61f53c03be1ee277d4dd9650412285a64a0a4d2",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/3fa027f1fe57e146203538c41db5b3e6c296b67a",
+                "reference": "3fa027f1fe57e146203538c41db5b3e6c296b67a",
                 "shasum": ""
             },
             "require": {
@@ -1133,7 +1136,7 @@
                 "dns",
                 "dns-resolver"
             ],
-            "time": "2015-06-02 14:02:29"
+            "time": "2015-09-06 18:06:51"
         },
         {
             "name": "react/event-loop",
@@ -1412,12 +1415,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "d7246885b7fe4cb5a2786bda34362d2f0e40b730"
+                "reference": "69b6037050614d129fee27e17951ec7968f6567e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/d7246885b7fe4cb5a2786bda34362d2f0e40b730",
-                "reference": "d7246885b7fe4cb5a2786bda34362d2f0e40b730",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/69b6037050614d129fee27e17951ec7968f6567e",
+                "reference": "69b6037050614d129fee27e17951ec7968f6567e",
                 "shasum": ""
             },
             "require": {
@@ -1462,7 +1465,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-24 15:32:32"
+            "time": "2015-09-09 18:05:45"
         },
         {
             "name": "symfony/http-foundation",
@@ -1523,12 +1526,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "e9554bafc78c93b15ef56ce72c5aa2f3a511e683"
+                "reference": "7ee642267d616c9855c28387d30050e093f26c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/e9554bafc78c93b15ef56ce72c5aa2f3a511e683",
-                "reference": "e9554bafc78c93b15ef56ce72c5aa2f3a511e683",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/7ee642267d616c9855c28387d30050e093f26c6b",
+                "reference": "7ee642267d616c9855c28387d30050e093f26c6b",
                 "shasum": ""
             },
             "require": {
@@ -1586,7 +1589,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2015-08-24 07:31:10"
+            "time": "2015-09-10 08:08:06"
         },
         {
             "name": "voryx/thruway",
@@ -1655,12 +1658,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "140505acd532961ba94c67ccde583454103a943d"
+                "reference": "bcc82b086d7ccca09d64e44c92f98da0054e2974"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/140505acd532961ba94c67ccde583454103a943d",
-                "reference": "140505acd532961ba94c67ccde583454103a943d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bcc82b086d7ccca09d64e44c92f98da0054e2974",
+                "reference": "bcc82b086d7ccca09d64e44c92f98da0054e2974",
                 "shasum": ""
             },
             "require": {
@@ -1669,6 +1672,7 @@
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": ">=2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0",
+                "ext-ctype": "*",
                 "ext-mbstring": "*",
                 "ezyang/htmlpurifier": "4.6.*",
                 "lib-pcre": "*",
@@ -1735,7 +1739,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-08-28 13:36:29"
+            "time": "2015-09-10 12:22:14"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -2002,9 +2006,9 @@
                 "bower-asset/jquery": ">=1.7"
             },
             "require-dev": {
-                "bower-asset/jasmine-ajax": ">=1.3.1,<1.4",
-                "bower-asset/jasmine-jquery": ">=1.5.2,<1.6",
-                "bower-asset/jquery": ">=1.7,<1.8"
+                "bower-asset/jasmine-ajax": "~1.3.1",
+                "bower-asset/jasmine-jquery": "~1.5.2",
+                "bower-asset/jquery": "~1.7"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -2017,12 +2021,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "7f842c2dbcbb9d7395a656ad68039a654047f907"
+                "reference": "4d1acafbfc49d0d4dcce327971fd69fdec5df7a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/7f842c2dbcbb9d7395a656ad68039a654047f907",
-                "reference": "7f842c2dbcbb9d7395a656ad68039a654047f907",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/4d1acafbfc49d0d4dcce327971fd69fdec5df7a4",
+                "reference": "4d1acafbfc49d0d4dcce327971fd69fdec5df7a4",
                 "shasum": ""
             },
             "require": {
@@ -2059,7 +2063,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-09-02 08:31:45"
+            "time": "2015-09-08 07:07:45"
         },
         {
             "name": "phpspec/php-diff",
@@ -2146,12 +2150,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "848fb19e123aaf2ea2e535282eed6c6cc781bd9a"
+                "reference": "daf79cf6f6e32c474c9a476293d199cae64254fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/848fb19e123aaf2ea2e535282eed6c6cc781bd9a",
-                "reference": "848fb19e123aaf2ea2e535282eed6c6cc781bd9a",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/daf79cf6f6e32c474c9a476293d199cae64254fb",
+                "reference": "daf79cf6f6e32c474c9a476293d199cae64254fb",
                 "shasum": ""
             },
             "require": {
@@ -2185,7 +2189,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2015-08-23 10:25:10"
+            "time": "2015-09-06 19:58:00"
         },
         {
             "name": "yiisoft/yii2-faker",

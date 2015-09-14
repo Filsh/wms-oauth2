@@ -5,7 +5,7 @@ namespace console\runners;
 use filsh\wamp\exceptions\ErrorException;
 use filsh\wamp\exceptions\ModelValidationException;
 
-abstract class Identity extends Runner
+abstract class Identity extends \filsh\wamp\components\Runner
 {
     protected function formatResult(\yii\web\IdentityInterface $identity = null)
     {

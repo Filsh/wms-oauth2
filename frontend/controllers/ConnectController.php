@@ -9,7 +9,6 @@ use yii\authclient\ClientInterface;
 use yii\web\NotFoundHttpException;
 use dektrium\user\Finder;
 use dektrium\user\models\User;
-use dektrium\user\models\Account;
 
 class ConnectController extends Controller
 {
@@ -40,7 +39,7 @@ class ConnectController extends Controller
     public function successCollback(ClientInterface $client)
     {
         $account = forward_static_call([
-            Account::class,
+            \Yii::$app->getModule('user')->modelMap['Account'],
             'createFromClient'
         ], $client);
         
@@ -73,6 +72,9 @@ class ConnectController extends Controller
         
         if ($user->load(\Yii::$app->request->post()) && $user->create()) {
             $account->link('user', $user);
+            if($user->avatar === null && ($link = $account->getAvatarLink()) !== null) {
+                $user->createAvatar($link);
+            }
             \Yii::$app->user->login($user, \Yii::$app->getModule('user')->rememberFor);
             return \Yii::$app->getResponse()->redirect($this->getSuccessUrl($user));
         }
