@@ -81,9 +81,15 @@ class User extends \dektrium\user\models\User implements UserCredentialsInterfac
         return $details;
     }
     
-    public function createAvatar($imageUrl)
+    public function createAvatar($imageUrl, $domain, $https = true)
     {
-        $result = Yii::$app->wampLocator->uploadImageFile(['url' => $imageUrl, 'type' => 'avatar']);
+        $result = Yii::$app->wampLocator->uploadImageFile([
+            'url' => $imageUrl,
+            'type' => 'avatar',
+            'domain' => $domain,
+            'https' => $https
+        ]);
+        
         if($result === null) {
             throw new \yii\base\Exception('Unknown wamp error');
         }

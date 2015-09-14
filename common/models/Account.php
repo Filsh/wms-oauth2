@@ -19,18 +19,6 @@ class Account extends \dektrium\user\models\Account
         ];
     }
     
-    /**
-     * @inheritdoc
-     */
-    public static function createFromClient(ClientInterface $client)
-    {
-        $account = parent::createFromClient($client);
-        if($account->user !== null && $account->user->avatar === null && ($link = $account->getAvatarLink()) !== null) {
-            $account->user->createAvatar($link);
-        }
-        return $account;
-    }
-    
     public function getAvatarLink()
     {
         $link = null;

@@ -9,6 +9,7 @@ use yii\authclient\ClientInterface;
 use yii\web\NotFoundHttpException;
 use dektrium\user\Finder;
 use dektrium\user\models\User;
+use dektrium\user\models\Account;
 
 class ConnectController extends Controller
 {
@@ -50,6 +51,7 @@ class ConnectController extends Controller
                 $this->successUrlParam => \Yii::$app->request->get($this->successUrlParam)
             ]);
         } else {
+            $this->checkUserAvatar($account, $user);
             $url = $this->getSuccessUrl($user);
         }
         
@@ -72,9 +74,8 @@ class ConnectController extends Controller
         
         if ($user->load(\Yii::$app->request->post()) && $user->create()) {
             $account->link('user', $user);
-            if($user->avatar === null && ($link = $account->getAvatarLink()) !== null) {
-                $user->createAvatar($link);
-            }
+            $this->checkUserAvatar($account, $user);
+            
             \Yii::$app->user->login($user, \Yii::$app->getModule('user')->rememberFor);
             return \Yii::$app->getResponse()->redirect($this->getSuccessUrl($user));
         }
@@ -98,5 +99,12 @@ class ConnectController extends Controller
             'id' => $user->getId(),
             'authKey' => $user->getAuthKey()
         ]);
+    }
+    
+    protected function checkUserAvatar(Account $account, User $user)
+    {
+        if($user->avatar === null && ($link = $account->getAvatarLink()) !== null) {
+            $user->createAvatar($link, 'lookinday.dev', false);
+        }
     }
 }

@@ -742,12 +742,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/yii2-wamp.git",
-                "reference": "f31a3cc3ee43909d58f7160c7f17dc6e81804e51"
+                "reference": "ac98f62a1345183f0f6d86300b479c2a2d8ae6bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/f31a3cc3ee43909d58f7160c7f17dc6e81804e51",
-                "reference": "f31a3cc3ee43909d58f7160c7f17dc6e81804e51",
+                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/ac98f62a1345183f0f6d86300b479c2a2d8ae6bf",
+                "reference": "ac98f62a1345183f0f6d86300b479c2a2d8ae6bf",
                 "shasum": ""
             },
             "require": {
@@ -779,7 +779,7 @@
                 "module",
                 "yii"
             ],
-            "time": "2015-09-13 20:51:06"
+            "time": "2015-09-14 10:32:40"
         },
         {
             "name": "guzzle/guzzle",
@@ -2018,12 +2018,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "4d1acafbfc49d0d4dcce327971fd69fdec5df7a4"
+                "reference": "bedaf7d2fbb3ed8afb21e2f4b5f9209cac1fcdc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/4d1acafbfc49d0d4dcce327971fd69fdec5df7a4",
-                "reference": "4d1acafbfc49d0d4dcce327971fd69fdec5df7a4",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/bedaf7d2fbb3ed8afb21e2f4b5f9209cac1fcdc6",
+                "reference": "bedaf7d2fbb3ed8afb21e2f4b5f9209cac1fcdc6",
                 "shasum": ""
             },
             "require": {
@@ -2060,7 +2060,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-09-08 07:07:45"
+            "time": "2015-09-14 08:38:09"
         },
         {
             "name": "phpspec/php-diff",
