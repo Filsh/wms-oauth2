@@ -28,11 +28,22 @@ class Avatar extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public function fields()
+    {
+        return [
+            'prefix',
+            'suffix',
+        ];
+    }
+    
+    /**
+     * @inheritdoc
+     */
     public function rules()
     {
         return [
-            [['user_id', 'prefix', 'suffix', 'create_time', 'update_time'], 'required'],
-            [['user_id', 'create_time', 'update_time'], 'integer'],
+            [['user_id', 'prefix', 'suffix'], 'required'],
+            [['user_id'], 'integer'],
             [['prefix', 'suffix'], 'string', 'max' => 255],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];

@@ -25,7 +25,10 @@ class Profile extends \dektrium\user\models\Profile
             'email' => 'public_email',
             'location',
             'website',
-            'bio'
+            'bio',
+            'avatar' => function() {
+                return $this->user->avatar !== null ? $this->user->avatar : [];
+            }
         ];
     }
     

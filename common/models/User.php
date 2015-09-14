@@ -83,15 +83,28 @@ class User extends \dektrium\user\models\User implements UserCredentialsInterfac
     
     public function createAvatar($imageUrl)
     {
-        $result = Yii::$app->wampLocator->uploadImageFile(
-            ['url' => $imageUrl, 'type' => 'avatar'],
-            function() {
-                var_dump(func_get_args());exit;
-            },
-            function() {
-                var_dump(func_get_args());exit;
+        $result = Yii::$app->wampLocator->uploadImageFile(['url' => $imageUrl, 'type' => 'avatar']);
+        if($result === null) {
+            throw new \yii\base\Exception('Unknown wamp error');
+        }
+        
+        $avatar = Yii::createObject([
+            'class' => Avatar::class,
+            'user_id' => $this->id,
+            'prefix' => $result->prefix,
+            'suffix' => $result->suffix,
+        ]);
+        
+        $transaction = $this->getDb()->beginTransaction();
+        try {
+            if(!$avatar->save()) {
+                throw new \yii\base\Exception('Unable to creater user avatar.');
             }
-        );
-        var_dump($imageUrl, $result);exit;
+            $this->link('avatar', $avatar);
+            $transaction->commit();
+        } catch (\Exception $e) {
+            $transaction->rollback();
+            throw $e;
+        }
     }
 }

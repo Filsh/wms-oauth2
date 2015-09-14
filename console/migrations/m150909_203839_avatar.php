@@ -20,7 +20,7 @@ class m150909_203839_avatar extends Migration
             'suffix' => Schema::TYPE_STRING . '(255) NOT NULL',
             'create_time' => Schema::TYPE_INTEGER . ' NOT NULL',
             'update_time' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'FOREIGN KEY (`user_id`) REFERENCES ' . User::class . ' (`id`) ON DELETE CASCADE ON UPDATE CASCADE'
+            'FOREIGN KEY (`user_id`) REFERENCES ' . User::tableName() . ' (`id`) ON DELETE CASCADE ON UPDATE CASCADE'
         ], $tableOptions);
     }
 
