@@ -13,6 +13,15 @@ return [
             'host' => '%WAMP_TCP_ADDR%',
             'port' => '%WAMP_TCP_PORT%',
         ],
+        'configManager' => [
+            'rules' => [
+                'rule-1' => [
+                    'name' => '%SANDBOX_NAME_1%',
+                    'include' => '%SANDBOX_INCLUDE_PATTERN_1%',
+                    'exclude' => '%SANDBOX_EXCLUDE_PATTERN_1%'
+                ]
+            ]
+        ],
         'authClientCollection' => [
             'clients' => [
                 'facebook' => [

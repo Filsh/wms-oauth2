@@ -1,6 +1,8 @@
 <?php
+
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'bootstrap' => ['log', 'config'],
     'components' => [
         'authManager' => [
             'class' => \dektrium\rbac\components\DbManager::class,
@@ -58,6 +60,14 @@ return [
                 ]
             ]
         ],
+        'configManager' => [
+            'class' => \common\base\ConfigManager::class,
+            'rules' => [
+                'rule-1' => [
+                    'class' => \common\base\HostRegexpRule::class
+                ]
+            ]
+        ],
     ],
     'modules' => [
         'user' => [
@@ -68,6 +78,11 @@ return [
                 'Profile' => \common\models\Profile::class,
                 'Account' => \common\models\Account::class
             ]
+        ],
+        'config' => [
+            'class' => \bupy7\config\Module::class,
+            'enableCaching' => !YII_DEBUG,
+            'params' => require('config-params.php')
         ],
     ],
 ];

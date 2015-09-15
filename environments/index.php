@@ -66,6 +66,18 @@ return yii\helpers\ArrayHelper::merge(
                 ],
                 'params' => [],
             ],
+            'setSandboxParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
+            'setConfigParams' => [
+                'paths' => [
+                    'common/config/config-params-local.php'
+                ],
+                'params' => [],
+            ],
         ],
         'prod' => [
             'path' => 'prod',
@@ -97,6 +109,18 @@ return yii\helpers\ArrayHelper::merge(
             'setAuthClientParams' => [
                 'paths' => [
                     'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
+            'setSandboxParams' => [
+                'paths' => [
+                    'common/config/main-local.php'
+                ],
+                'params' => [],
+            ],
+            'setConfigParams' => [
+                'paths' => [
+                    'common/config/config-params-local.php'
                 ],
                 'params' => [],
             ],

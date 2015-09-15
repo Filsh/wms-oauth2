@@ -11,7 +11,6 @@ return [
     'name' => 'Oauth2 WMS',
     'basePath' => dirname(__DIR__),
     'language' => 'ru',
-    'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'urlManager' => [

@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "917698c35ae9e58fd39ebc761b31f4ab",
+    "hash": "fcbc739b1e75bd96059d141565f52658",
+    "content-hash": "e36b45b19869f75d7424af7bb34098b5",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -286,6 +287,49 @@
             "time": "2014-02-27 13:40:40"
         },
         {
+            "name": "bupy7/yii2-config",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bupy7/yii2-config.git",
+                "reference": "2fec8c402fe717b5be802f65376af444b0ef8716"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bupy7/yii2-config/zipball/2fec8c402fe717b5be802f65376af444b0ef8716",
+                "reference": "2fec8c402fe717b5be802f65376af444b0ef8716",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "bupy7\\config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vasilij Belosludcev",
+                    "email": "bupy765@gmail.com"
+                }
+            ],
+            "description": "This is module allow storing configuration parameters of application to database and management they dynamically from admin panel.",
+            "keywords": [
+                "config",
+                "extension",
+                "module",
+                "yii2"
+            ],
+            "time": "2015-09-15 14:15:14"
+        },
+        {
             "name": "cboden/ratchet",
             "version": "v0.3.3",
             "source": {
@@ -399,12 +443,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dektrium/yii2-rbac.git",
-                "reference": "a1fd759990291392b5aeb3831855c0ce15eba4a1"
+                "reference": "41a5c26b551eb6331c9c1ae222f41e6248b9936f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-rbac/zipball/a1fd759990291392b5aeb3831855c0ce15eba4a1",
-                "reference": "a1fd759990291392b5aeb3831855c0ce15eba4a1",
+                "url": "https://api.github.com/repos/dektrium/yii2-rbac/zipball/41a5c26b551eb6331c9c1ae222f41e6248b9936f",
+                "reference": "41a5c26b551eb6331c9c1ae222f41e6248b9936f",
                 "shasum": ""
             },
             "require": {
@@ -441,7 +485,7 @@
                 "yii2",
                 "yii2-rbac"
             ],
-            "time": "2015-09-13 19:39:35"
+            "time": "2015-09-14 19:49:30"
         },
         {
             "name": "dektrium/yii2-user",
@@ -1470,12 +1514,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "3f179ebcfc2f9cb82a47e890ed4622f48cfb4602"
+                "reference": "ff8b1222ab4fb12023eda2fc721ca321448e9f7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/3f179ebcfc2f9cb82a47e890ed4622f48cfb4602",
-                "reference": "3f179ebcfc2f9cb82a47e890ed4622f48cfb4602",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/ff8b1222ab4fb12023eda2fc721ca321448e9f7a",
+                "reference": "ff8b1222ab4fb12023eda2fc721ca321448e9f7a",
                 "shasum": ""
             },
             "require": {
@@ -1515,7 +1559,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2015-08-27 06:53:13"
+            "time": "2015-09-14 14:15:17"
         },
         {
             "name": "symfony/routing",
@@ -1523,12 +1567,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "7ee642267d616c9855c28387d30050e093f26c6b"
+                "reference": "2bc066c5e9e4f583d0a66bcdd27688b87f16550e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/7ee642267d616c9855c28387d30050e093f26c6b",
-                "reference": "7ee642267d616c9855c28387d30050e093f26c6b",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/2bc066c5e9e4f583d0a66bcdd27688b87f16550e",
+                "reference": "2bc066c5e9e4f583d0a66bcdd27688b87f16550e",
                 "shasum": ""
             },
             "require": {
@@ -1586,7 +1630,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2015-09-10 08:08:06"
+            "time": "2015-09-14 14:15:17"
         },
         {
             "name": "voryx/thruway",
@@ -2018,12 +2062,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "bedaf7d2fbb3ed8afb21e2f4b5f9209cac1fcdc6"
+                "reference": "56d5ed438eaf45bac2d63cdd50a5c92d9b3f3b01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/bedaf7d2fbb3ed8afb21e2f4b5f9209cac1fcdc6",
-                "reference": "bedaf7d2fbb3ed8afb21e2f4b5f9209cac1fcdc6",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/56d5ed438eaf45bac2d63cdd50a5c92d9b3f3b01",
+                "reference": "56d5ed438eaf45bac2d63cdd50a5c92d9b3f3b01",
                 "shasum": ""
             },
             "require": {
@@ -2060,7 +2104,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-09-14 08:38:09"
+            "time": "2015-09-14 12:43:51"
         },
         {
             "name": "phpspec/php-diff",

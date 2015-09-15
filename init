@@ -77,7 +77,7 @@ foreach ($files as $file) {
     }
 }
 
-$callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink', 'setMysqlParams', 'setWampRouterParams', 'setAuthClientParams'];
+$callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink', 'setMysqlParams', 'setWampRouterParams', 'setAuthClientParams', 'setSandboxParams', 'setConfigParams'];
 foreach ($callbacks as $callback) {
     if (!empty($env[$callback])) {
         $callback($root, $env[$callback]);
@@ -210,6 +210,16 @@ function setWampRouterParams($root, $params)
 }
 
 function setAuthClientParams($root, $params)
+{
+    setReplacedParams($root, $params);
+}
+
+function setSandboxParams($root, $params)
+{
+    setReplacedParams($root, $params);
+}
+
+function setConfigParams($root, $params)
 {
     setReplacedParams($root, $params);
 }

@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use Yii;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\authclient\AuthAction;
@@ -103,6 +104,7 @@ class ConnectController extends Controller
     
     protected function checkUserAvatar(Account $account, User $user)
     {
+        var_dump(Yii::$app->configManager->get('commonDomain'));exit;
         if($user->avatar === null && ($link = $account->getAvatarLink()) !== null) {
             $user->createAvatar($link, 'lookinday.dev', false);
         }
