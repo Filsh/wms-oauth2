@@ -2,39 +2,39 @@
 return [
     'components' => [
         'db' => [
-            'dsn' => 'mysql:host=%MYSQL_TCP_ADDR%;port=%MYSQL_TCP_PORT%;dbname=%MYSQL_DATABASE%',
-            'username' => '%MYSQL_ENV_MYSQL_USER%',
-            'password' => '%MYSQL_ENV_MYSQL_PASSWORD%',
+            'dsn' => 'mysql:host=%DB_HOST%;port=%DB_PORT%;dbname=%DB_NAME%',
+            'username' => '%DB_USER%',
+            'password' => '%DB_PASS%'
         ],
         'mailer' => [
             'useFileTransport' => true,
         ],
         'wampRouter' => [
-            'host' => '%WAMP_TCP_ADDR%',
-            'port' => '%WAMP_TCP_PORT%',
+            'host' => '%WAMP_HOST%',
+            'port' => '%WAMP_PORT%',
         ],
         'configManager' => [
             'rules' => [
                 'rule-1' => [
-                    'name' => '%SANDBOX_NAME_1%',
-                    'include' => '%SANDBOX_INCLUDE_PATTERN_1%',
-                    'exclude' => '%SANDBOX_EXCLUDE_PATTERN_1%'
+                    'name' => '%ALPHA_NAME%',
+                    'include' => '%ALPHA_SANDBOX_INCLUDE_PATTERN%',
+                    'exclude' => '%ALPHA_SANDBOX_EXCLUDE_PATTERN%'
                 ]
             ]
         ],
         'authClientCollection' => [
             'clients' => [
                 'facebook' => [
-                    'clientId'      => '%FACEBOOK_CLIENT_ID%',
-                    'clientSecret'  => '%FACEBOOK_CLIENT_SECRET%',
+                    'clientId'      => '%ALPHA_FACEBOOK_CLIENT_ID%',
+                    'clientSecret'  => '%ALPHA_FACEBOOK_CLIENT_SECRET%',
                 ],
                 'twitter' => [
-                    'consumerKey'       => '%TWITTER_CONSUMER_KEY%',
-                    'consumerSecret'    => '%TWITTER_CONSUMER_SECRET%',
+                    'consumerKey'       => '%ALPHA_TWITTER_CONSUMER_KEY%',
+                    'consumerSecret'    => '%ALPHA_TWITTER_CONSUMER_SECRET%',
                 ],
                 'google' => [
-                    'clientId'      => '%GOOGLE_CLIENT_ID%',
-                    'clientSecret'  => '%GOOGLE_CLIENT_SECRET%',
+                    'clientId'      => '%ALPHA_GOOGLE_CLIENT_ID%',
+                    'clientSecret'  => '%ALPHA_GOOGLE_CLIENT_SECRET%',
                 ]
             ],
         ],
