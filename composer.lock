@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fcbc739b1e75bd96059d141565f52658",
-    "content-hash": "e36b45b19869f75d7424af7bb34098b5",
+    "hash": "ad98077924c4bbc6eb925b02f8884c26",
+    "content-hash": "8eb9b2d2d35a5a1a604127b56357fb54",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -645,31 +645,30 @@
             "time": "2013-11-30 08:25:19"
         },
         {
-            "name": "filsh/wms-wamp-locator",
+            "name": "filsh/yii2-config-manager",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Filsh/wms-wamp-locator.git",
-                "reference": "6be85d7e35efb788cdaface791e0151852620fab"
+                "url": "https://github.com/Filsh/yii2-config-manager.git",
+                "reference": "82212d3960ce92c83af100d485022ebe274af516"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/wms-wamp-locator/zipball/6be85d7e35efb788cdaface791e0151852620fab",
-                "reference": "6be85d7e35efb788cdaface791e0151852620fab",
+                "url": "https://api.github.com/repos/Filsh/yii2-config-manager/zipball/82212d3960ce92c83af100d485022ebe274af516",
+                "reference": "82212d3960ce92c83af100d485022ebe274af516",
                 "shasum": ""
             },
             "require": {
-                "filsh/yii2-runner": "dev-master",
-                "filsh/yii2-wamp": "dev-master",
-                "php": ">=5.4.0",
+                "bupy7/yii2-config": "~1.0.2",
                 "yiisoft/yii2": "*"
             },
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "filsh\\wms\\wamplocator\\": ""
+                    "filsh\\config\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -679,18 +678,13 @@
                     "email": "imaliy.filsh@gmail.com"
                 }
             ],
-            "description": "Extension provide interfaces for WMS",
-            "homepage": "https://bitbucket.org/filsh/wms-wamp-locator",
+            "description": "Config manager based on bupy7/yii2-config",
+            "homepage": "https://github.com/Filsh/yii2-config-manager.git",
             "keywords": [
                 "extension",
                 "yii"
             ],
-            "support": {
-                "email": "imaliy.filsh@gmail.com",
-                "source": "https://bitbucket.org/filsh/wms-wamp-locator",
-                "issues": "https://github.com/Filsh/wms-wamp-locator/issues"
-            },
-            "time": "2015-09-17 16:08:28"
+            "time": "2015-09-17 22:05:18"
         },
         {
             "name": "filsh/yii2-oauth2-server",
@@ -789,15 +783,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/yii2-wamp.git",
-                "reference": "0b46c6afd97fefc04cb0a03cbe54f8b946876b0a"
+                "reference": "a45008f1b7003c47e463fd1cb4686d7c1cea085c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/0b46c6afd97fefc04cb0a03cbe54f8b946876b0a",
-                "reference": "0b46c6afd97fefc04cb0a03cbe54f8b946876b0a",
+                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/a45008f1b7003c47e463fd1cb4686d7c1cea085c",
+                "reference": "a45008f1b7003c47e463fd1cb4686d7c1cea085c",
                 "shasum": ""
             },
             "require": {
+                "filsh/yii2-runner": "dev-master",
                 "voryx/thruway": "0.3.*",
                 "yiisoft/yii2": "*"
             },
@@ -826,7 +821,7 @@
                 "module",
                 "yii"
             ],
-            "time": "2015-09-17 16:09:04"
+            "time": "2015-09-17 21:49:56"
         },
         {
             "name": "guzzle/guzzle",
@@ -2341,7 +2336,8 @@
     "stability-flags": {
         "dektrium/yii2-user": 20,
         "dektrium/yii2-rbac": 20,
-        "filsh/wms-wamp-locator": 20
+        "filsh/yii2-wamp": 20,
+        "filsh/yii2-config-manager": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

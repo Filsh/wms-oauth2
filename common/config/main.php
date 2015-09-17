@@ -51,10 +51,10 @@ return [
             ]
         ],
         'configManager' => [
-            'class' => \common\base\ConfigManager::class,
+            'class' => \filsh\config\ConfigManager::class,
             'rules' => [
                 'alpha' => [
-                    'class' => \common\base\rule\HostRegexp::class
+                    'class' => \filsh\config\rule\HostRegexp::class
                 ]
             ]
         ],

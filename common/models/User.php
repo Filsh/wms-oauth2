@@ -83,14 +83,9 @@ class User extends \dektrium\user\models\User implements UserCredentialsInterfac
     
     public function createAvatar($imageUrl)
     {
-        $https = true;
-        $commonDomain = Yii::$app->configManager->get('commonDomain');
-        
         $result = Yii::$app->getModule('wamp')->uploadImageFile([
             'url' => $imageUrl,
             'type' => 'avatar',
-            'domain' => $commonDomain,
-            'https' => $https
         ]);
         
         if($result === null) {
