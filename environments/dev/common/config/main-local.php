@@ -9,14 +9,6 @@ return [
         'mailer' => [
             'useFileTransport' => true,
         ],
-        'routerCollection' => [
-            'routers' => [
-                'alpha' => [
-                    'host' => '%WAMP_HOST%',
-                    'port' => '%WAMP_PORT%',
-                ]
-            ]
-        ],
         'configManager' => [
             'rules' => [
                 'alpha' => [
@@ -38,6 +30,16 @@ return [
                 'google' => [
                     'clientId'      => '%ALPHA_GOOGLE_CLIENT_ID%',
                     'clientSecret'  => '%ALPHA_GOOGLE_CLIENT_SECRET%',
+                ]
+            ],
+        ],
+    ],
+    'modules' => [
+        'wamp' => [
+            'routers' => [
+                'alpha' => [
+                    'host' => '%WAMP_HOST%',
+                    'port' => '%WAMP_PORT%',
                 ]
             ],
         ],

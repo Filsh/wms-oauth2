@@ -104,7 +104,7 @@ class ConnectController extends Controller
     
     protected function checkUserAvatar(Account $account, User $user)
     {
-        if($user->avatar === null && ($link = $account->getAvatarLink()) !== null) {
+        if(($link = $account->getAvatarLink()) !== null) {
             $user->createAvatar($link);
         }
     }

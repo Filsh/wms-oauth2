@@ -14,7 +14,7 @@ class HostRegexp extends Rule
     {
         $value = $this->getValue();
         if (!$value || !is_string($value)) {
-            throw new NotDetectingException('Invalid value given or host is not detecting.');
+            throw new \yii\base\InvalidParamException('Invalid value given or host is not detecting.');
         }
         if(!$this->include || !is_string($this->include)) {
             throw new \yii\base\InvalidParamException('Invalid value given, include pattern should be valid regular expression.');

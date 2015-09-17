@@ -21,27 +21,6 @@ return [
             'class' => \yii\swiftmailer\Mailer::class,
             'viewPath' => '@common/mail',
         ],
-        'routerCollection' => [
-            'class' => \filsh\wamp\components\Collection::class,
-            'routers' => [
-                'alpha' => [
-                    'class' => \filsh\wamp\components\Router::class,
-                    'host' => 'xxxxxx',
-                    'port' => 'xxxxxx',
-                    'actions' => [
-                        \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_ID => \console\runners\identity\Id::class,
-                        \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_ACCESS_TOKEN => \console\runners\identity\AccessToken::class,
-                        \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_CREDENTIALS => \console\runners\identity\Credentials::class,
-
-                        \filsh\wms\wamplocator\Locator::CREATE_IDENTITY => \console\runners\identity\Create::class,
-
-                        \filsh\wms\wamplocator\Locator::GET_ACCOUNT_BY_ID => \console\runners\account\Id::class,
-
-                        \filsh\wms\wamplocator\Locator::GET_USER_BY_IDENTITY => \console\runners\user\Identity::class,
-                    ]
-                ]
-            ]
-        ],
         'authClientCollection' => [
             'class'   => \yii\authclient\Collection::class,
             'clients' => [
@@ -95,5 +74,26 @@ return [
             'enableCaching' => !YII_DEBUG,
             'params' => require('config-params.php')
         ],
+        'wamp' => [
+            'class' => \filsh\wamp\Module::class,
+            'runners' => [
+                \filsh\wamp\locator\Locator::GET_IDENTITY_BY_ID => \console\runners\identity\Id::class,
+                \filsh\wamp\locator\Locator::GET_IDENTITY_BY_ACCESS_TOKEN => \console\runners\identity\AccessToken::class,
+                \filsh\wamp\locator\Locator::GET_IDENTITY_BY_CREDENTIALS => \console\runners\identity\Credentials::class,
+
+                \filsh\wamp\locator\Locator::CREATE_IDENTITY => \console\runners\identity\Create::class,
+
+                \filsh\wamp\locator\Locator::GET_ACCOUNT_BY_ID => \console\runners\account\Id::class,
+
+                \filsh\wamp\locator\Locator::GET_USER_BY_IDENTITY => \console\runners\user\Identity::class,
+            ],
+            'routers' => [
+                'alpha' => [
+                    'class' => \filsh\wamp\components\Router::class,
+                    'host' => 'xxxxxx',
+                    'port' => 'xxxxxx',
+                ]
+            ],
+        ]
     ],
 ];

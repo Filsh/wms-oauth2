@@ -9,34 +9,33 @@ class ConfigManager extends BaseConfigManager
 {
     public $rules = [];
     
-    protected $module = null;
+    protected $target = null;
     
     /**
      * @inheritdoc
      */
     public function get($name)
     {
-        $module = $this->detectModule();
-        return parent::get($module, $name);
+        $target = $this->detectTarget();
+        return parent::get($target, $name);
     }
     
-    protected function detectModule()
+    protected function detectTarget()
     {
-        if($this->module === null) {
-            foreach($this->rules as $module => $config) {
+        if($this->target === null) {
+            foreach($this->rules as $target => $config) {
                 /* @var $rule Rule */
                 $rule = Yii::createObject($config);
                 if($rule->isValid()) {
-                    $this->module = $module;
+                    $this->target = $target;
                     break;
                 }
             }
             
-            if($this->module === null) {
+            if($this->target === null) {
                 throw new \yii\base\Exception('Sandbox not detected.');
             }
         }
-        
-        return $this->module;
+        return $this->target;
     }
 }

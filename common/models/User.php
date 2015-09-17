@@ -86,7 +86,7 @@ class User extends \dektrium\user\models\User implements UserCredentialsInterfac
         $https = true;
         $commonDomain = Yii::$app->configManager->get('commonDomain');
         
-        $result = Yii::$app->wampLocator->uploadImageFile([
+        $result = Yii::$app->getModule('wamp')->uploadImageFile([
             'url' => $imageUrl,
             'type' => 'avatar',
             'domain' => $commonDomain,

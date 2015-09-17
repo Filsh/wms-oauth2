@@ -232,7 +232,10 @@
                     "vendor/",
                     "script/",
                     "test/"
-                ]
+                ],
+                "branch-alias": {
+                    "dev-master": "2.0.3-dev"
+                }
             },
             "license": [
                 "MIT"
@@ -647,12 +650,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/wms-wamp-locator.git",
-                "reference": "b5bc04d1d2942f0dbec69bdc405df7c43f99186d"
+                "reference": "6be85d7e35efb788cdaface791e0151852620fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/wms-wamp-locator/zipball/b5bc04d1d2942f0dbec69bdc405df7c43f99186d",
-                "reference": "b5bc04d1d2942f0dbec69bdc405df7c43f99186d",
+                "url": "https://api.github.com/repos/Filsh/wms-wamp-locator/zipball/6be85d7e35efb788cdaface791e0151852620fab",
+                "reference": "6be85d7e35efb788cdaface791e0151852620fab",
                 "shasum": ""
             },
             "require": {
@@ -687,7 +690,7 @@
                 "source": "https://bitbucket.org/filsh/wms-wamp-locator",
                 "issues": "https://github.com/Filsh/wms-wamp-locator/issues"
             },
-            "time": "2015-09-13 20:30:17"
+            "time": "2015-09-17 16:08:28"
         },
         {
             "name": "filsh/yii2-oauth2-server",
@@ -786,12 +789,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Filsh/yii2-wamp.git",
-                "reference": "ac98f62a1345183f0f6d86300b479c2a2d8ae6bf"
+                "reference": "0b46c6afd97fefc04cb0a03cbe54f8b946876b0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/ac98f62a1345183f0f6d86300b479c2a2d8ae6bf",
-                "reference": "ac98f62a1345183f0f6d86300b479c2a2d8ae6bf",
+                "url": "https://api.github.com/repos/Filsh/yii2-wamp/zipball/0b46c6afd97fefc04cb0a03cbe54f8b946876b0a",
+                "reference": "0b46c6afd97fefc04cb0a03cbe54f8b946876b0a",
                 "shasum": ""
             },
             "require": {
@@ -823,7 +826,7 @@
                 "module",
                 "yii"
             ],
-            "time": "2015-09-14 10:32:40"
+            "time": "2015-09-17 16:09:04"
         },
         {
             "name": "guzzle/guzzle",
@@ -1699,12 +1702,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "42749cbc9e36cbdd4b7659a0055f15598619decb"
+                "reference": "b4b13a0b901d16f37cb9a9bc4453c3f7c70da3f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/42749cbc9e36cbdd4b7659a0055f15598619decb",
-                "reference": "42749cbc9e36cbdd4b7659a0055f15598619decb",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/b4b13a0b901d16f37cb9a9bc4453c3f7c70da3f6",
+                "reference": "b4b13a0b901d16f37cb9a9bc4453c3f7c70da3f6",
                 "shasum": ""
             },
             "require": {
@@ -1780,7 +1783,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-09-13 23:12:35"
+            "time": "2015-09-16 14:38:02"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -1788,12 +1791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-authclient.git",
-                "reference": "e8c639af26be6ce38b0bbf5113882345fe25de3d"
+                "reference": "29084b15fd366eef84562c439fb5940b099fd8e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/e8c639af26be6ce38b0bbf5113882345fe25de3d",
-                "reference": "e8c639af26be6ce38b0bbf5113882345fe25de3d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/29084b15fd366eef84562c439fb5940b099fd8e9",
+                "reference": "29084b15fd366eef84562c439fb5940b099fd8e9",
                 "shasum": ""
             },
             "require": {
@@ -1828,7 +1831,7 @@
                 "oauth",
                 "yii2"
             ],
-            "time": "2015-08-31 07:56:21"
+            "time": "2015-09-17 14:10:10"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1836,12 +1839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "5ae12770c69b1b42f1be742ca16d97dc63371eb8"
+                "reference": "c25dc1e23d188954b546f6bd95def1027d91113b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/5ae12770c69b1b42f1be742ca16d97dc63371eb8",
-                "reference": "5ae12770c69b1b42f1be742ca16d97dc63371eb8",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/c25dc1e23d188954b546f6bd95def1027d91113b",
+                "reference": "c25dc1e23d188954b546f6bd95def1027d91113b",
                 "shasum": ""
             },
             "require": {
@@ -1878,7 +1881,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2015-08-27 12:55:38"
+            "time": "2015-09-17 13:11:22"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -2047,9 +2050,9 @@
                 "bower-asset/jquery": ">=1.7"
             },
             "require-dev": {
-                "bower-asset/jasmine-ajax": ">=1.3.1,<1.4",
-                "bower-asset/jasmine-jquery": ">=1.5.2,<1.6",
-                "bower-asset/jquery": ">=1.7,<1.8"
+                "bower-asset/jasmine-ajax": "~1.3.1",
+                "bower-asset/jasmine-jquery": "~1.5.2",
+                "bower-asset/jquery": "~1.7"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -2062,12 +2065,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "56d5ed438eaf45bac2d63cdd50a5c92d9b3f3b01"
+                "reference": "46a25cb87fe630550e99b2a26d6fa7cce3b4143d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/56d5ed438eaf45bac2d63cdd50a5c92d9b3f3b01",
-                "reference": "56d5ed438eaf45bac2d63cdd50a5c92d9b3f3b01",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/46a25cb87fe630550e99b2a26d6fa7cce3b4143d",
+                "reference": "46a25cb87fe630550e99b2a26d6fa7cce3b4143d",
                 "shasum": ""
             },
             "require": {
@@ -2104,7 +2107,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-09-14 12:43:51"
+            "time": "2015-09-16 06:57:55"
         },
         {
             "name": "phpspec/php-diff",

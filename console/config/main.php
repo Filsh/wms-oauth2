@@ -20,11 +20,5 @@ return [
             ],
         ],
     ],
-    'modules' => [
-        'wamp' => [
-            'class' => \filsh\wamp\Module::class,
-            'routerCollection' => 'routerCollection',
-        ]
-    ],
     'params' => $params,
 ];
