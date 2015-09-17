@@ -21,15 +21,26 @@ return [
             'class' => \yii\swiftmailer\Mailer::class,
             'viewPath' => '@common/mail',
         ],
-        'wampRouter' => [
-            'class' => \filsh\wamp\components\Router::class,
-            'host' => 'xxxxxx',
-            'port' => 'xxxxxx',
-            'realm' => 'realm'
-        ],
-        'wampLocator' => [
-            'class' => \filsh\wms\wamplocator\Locator::class,
-            'wampRouter' => 'wampRouter'
+        'routerCollection' => [
+            'class' => \filsh\wamp\components\Collection::class,
+            'routers' => [
+                'alpha' => [
+                    'class' => \filsh\wamp\components\Router::class,
+                    'host' => 'xxxxxx',
+                    'port' => 'xxxxxx',
+                    'actions' => [
+                        \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_ID => \console\runners\identity\Id::class,
+                        \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_ACCESS_TOKEN => \console\runners\identity\AccessToken::class,
+                        \filsh\wms\wamplocator\Locator::GET_IDENTITY_BY_CREDENTIALS => \console\runners\identity\Credentials::class,
+
+                        \filsh\wms\wamplocator\Locator::CREATE_IDENTITY => \console\runners\identity\Create::class,
+
+                        \filsh\wms\wamplocator\Locator::GET_ACCOUNT_BY_ID => \console\runners\account\Id::class,
+
+                        \filsh\wms\wamplocator\Locator::GET_USER_BY_IDENTITY => \console\runners\user\Identity::class,
+                    ]
+                ]
+            ]
         ],
         'authClientCollection' => [
             'class'   => \yii\authclient\Collection::class,
@@ -63,8 +74,8 @@ return [
         'configManager' => [
             'class' => \common\base\ConfigManager::class,
             'rules' => [
-                'rule-1' => [
-                    'class' => \common\base\HostRegexpRule::class
+                'alpha' => [
+                    'class' => \common\base\rule\HostRegexp::class
                 ]
             ]
         ],

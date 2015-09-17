@@ -6,16 +6,19 @@ return [
             'username' => '%DB_USER%',
             'password' => '%DB_PASS%'
         ],
-        'wampRouter' => [
-            'host' => '%WAMP_HOST%',
-            'port' => '%WAMP_PORT%',
+        'routerCollection' => [
+            'routers' => [
+                'alpha' => [
+                    'host' => '%WAMP_HOST%',
+                    'port' => '%WAMP_PORT%',
+                ]
+            ]
         ],
         'configManager' => [
             'rules' => [
-                'rule-1' => [
-                    'name' => '%ALPHA_NAME%',
+                'alpha' => [
                     'include' => '%ALPHA_SANDBOX_INCLUDE_PATTERN%',
-                    'exclude' => '%SANDBOX_EXCLUDE_PATTERN_1%'
+                    'exclude' => '%ALPHA_SANDBOX_EXCLUDE_PATTERN%'
                 ]
             ]
         ],

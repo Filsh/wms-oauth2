@@ -9,14 +9,17 @@ return [
         'mailer' => [
             'useFileTransport' => true,
         ],
-        'wampRouter' => [
-            'host' => '%WAMP_HOST%',
-            'port' => '%WAMP_PORT%',
+        'routerCollection' => [
+            'routers' => [
+                'alpha' => [
+                    'host' => '%WAMP_HOST%',
+                    'port' => '%WAMP_PORT%',
+                ]
+            ]
         ],
         'configManager' => [
             'rules' => [
-                'rule-1' => [
-                    'name' => '%ALPHA_NAME%',
+                'alpha' => [
                     'include' => '%ALPHA_SANDBOX_INCLUDE_PATTERN%',
                     'exclude' => '%ALPHA_SANDBOX_EXCLUDE_PATTERN%'
                 ]

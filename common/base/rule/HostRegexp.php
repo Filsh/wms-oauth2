@@ -1,8 +1,10 @@
 <?php
 
-namespace common\base;
+namespace common\base\rule;
 
-class HostRegexpRule extends Rule
+use common\base\Rule;
+
+class HostRegexp extends Rule
 {
     public $include;
     

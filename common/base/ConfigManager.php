@@ -9,6 +9,8 @@ class ConfigManager extends BaseConfigManager
 {
     public $rules = [];
     
+    protected $module = null;
+    
     /**
      * @inheritdoc
      */
@@ -20,14 +22,21 @@ class ConfigManager extends BaseConfigManager
     
     protected function detectModule()
     {
-        foreach($this->rules as $config) {
-            /* @var $rule Rule */
-            $rule = Yii::createObject($config);
-            if($rule->isValid()) {
-                return $rule->name;
+        if($this->module === null) {
+            foreach($this->rules as $module => $config) {
+                /* @var $rule Rule */
+                $rule = Yii::createObject($config);
+                if($rule->isValid()) {
+                    $this->module = $module;
+                    break;
+                }
+            }
+            
+            if($this->module === null) {
+                throw new \yii\base\Exception('Sandbox not detected.');
             }
         }
         
-        throw new NotDetectingException('Sandbox not detected.');
+        return $this->module;
     }
 }

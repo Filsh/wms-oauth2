@@ -1,8 +1,7 @@
 <?php
 
 return [
-    'common-domain-1' => [
-        'module' => '%ALPHA_NAME%',
+    'alpha-common-domain' => [
         'value' => '%ALPHA_CONFIG_COMMON_DOMAIN%'
     ],
 ];

@@ -1,12 +1,12 @@
 <?php
 
-namespace common\base;
+namespace common\base\rule;
 
-use yii\platform\P;
-use yii\platform\console\Application;
+use Yii;
+use yii\console\Application;
 use yii\helpers\Console;
 
-class HostRegexpConsoleRule extends HostRegexpRule
+class RegexpConsole extends Regexp
 {
     public function getValue()
     {
@@ -20,7 +20,7 @@ class HostRegexpConsoleRule extends HostRegexpRule
             }
         }
         
-        $this->stdout(P::t('platform', 'Missing required option: --{name}', ['name' => Application::OPTION_APPHOST]), Console::FG_RED);
+        $this->stdout(Yii::t('app', 'Missing required option: --{name}', ['name' => Application::OPTION_APPHOST]), Console::FG_RED);
         die("\n\n");
     }
     
